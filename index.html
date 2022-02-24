@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+    <style>
+        button {
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="scr">
+<br><br>
+<div>
+    <button onclick="nhapMot(1)">1</button>
+    <button onclick="nhapMot(2)">2</button>
+    <button onclick="nhapMot(3)">3</button>
+    <button onclick="nhapMot('+')">+</button>
+</div>
+<br>
+<div>
+    <button onclick="nhapMot(4)">4</button>
+    <button onclick="nhapMot(6)">5</button>
+    <button onclick="nhapMot(6)">6</button>
+    <button onclick="nhapMot('-')">-</button>
+</div>
+<br>
+<div>
+    <button onclick="nhapMot(7)">7</button>
+    <button onclick="nhapMot(8)">8</button>
+    <button onclick="nhapMot(9)">9</button>
+    <button onclick="nhapMot('*')">*</button>
+</div>
+<br>
+<div>
+    <button onclick="xoaHet()">AC</button>
+    <button onclick="nhapMot(0)">0</button>
+    <button onclick="tinh()">=</button>
+    <button onclick="nhapMot('/')">/</button>
+</div>
+<script>
+    function nhapMot(data) {
+        document.getElementById("scr").value += data;
+    }
+    function tinh() {
+        document.getElementById("scr").value = eval(document.getElementById("scr").value);
+    }
+    function xoaHet() {
+        document.getElementById("scr").value = '';
+    }
+</script>
+</body>
+</html>
